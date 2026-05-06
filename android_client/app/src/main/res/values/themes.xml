@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema para ZeroLag Monitor: fullscreen inmersivo, barras del sistema transparentes -->
+    <style name="Theme.ZeroLag" parent="Theme.AppCompat.NoActionBar">
+        <!-- Fondo negro mientras carga el video -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <!-- Barras del sistema transparentes para que el video llegue hasta los bordes -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- Sin título ni ActionBar -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>

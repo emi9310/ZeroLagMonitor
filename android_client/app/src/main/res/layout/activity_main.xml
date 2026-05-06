@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Video — ocupa toda la pantalla -->
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <!-- Overlay de espera — se oculta al llegar el primer frame -->
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <!-- Logo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZeroLag"
+                android:textSize="52sp"
+                android:textStyle="bold"
+                android:textColor="#6C63FF"
+                android:letterSpacing="-0.03"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monitor"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#00D4AA"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="48dp" />
+
+            <!-- Indicador de pulso animado — contenedor grande para no recortar la expansión -->
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:clipChildren="false">
+
+                <!-- Ring 2 — desfasado (arranca con delay en código) -->
+                <View
+                    android:id="@+id/pulseRing2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_ring" />
+
+                <!-- Ring 1 — onda principal -->
+                <View
+                    android:id="@+id/pulseRing"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_ring" />
+
+                <!-- Círculo interior (sólido) -->
+                <View
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_solid" />
+            </FrameLayout>
+
+            <!-- Estado -->
+            <TextView
+                android:id="@+id/statusMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esperando conexión..."
+                android:textSize="16sp"
+                android:textColor="#E2E8F0"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Instrucciones -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Conectá el cable USB-C a la PC\n2. Abrí Myrror en el navegador de la PC\n3. Seleccioná el monitor y presioná Iniciar"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                android:lineSpacingMultiplier="1.6"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+# Android
+android_client/.gradle/
+android_client/.idea/
+android_client/app/build/
+android_client/app/.cxx/
+android_client/build/
+android_client/local.properties
+android_client/captures/
+android_client/**/*.iml
+android_client/.externalNativeBuild/
+android_client/.cxx/
+
+# Windows Host
+windows_host/build/
+windows_host/out/
+windows_host/bin/
+windows_host/.vs/
+windows_host/*.user
+windows_host/*.suo
+windows_host/*.sln.doccache
+
+# Installer
+installer/output/
+installer/redist/adb/
+installer/redist/vdd/
+
+# General
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Executables
+*.exe
+*.dll
+*.so
+*.a
+*.lib
